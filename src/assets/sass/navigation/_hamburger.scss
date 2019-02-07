@@ -1,0 +1,42 @@
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 27px;
+    width: 27px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+
+    &--line {
+        width: 27px;
+        height: 3px;
+        background: $color-light;
+        transition: all 0.2s;
+    }
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover &--line {
+        background: $color-light-hover;
+    }
+
+    &.open {
+        transform: rotate(180deg);
+
+        .hamburger--line {
+            &:nth-child(1) {
+                transform: rotate(45deg) translate(5px, 5px);
+            }
+            &:nth-child(2) {
+                opacity: 0;
+            }
+            &:nth-child(3) {
+                transform: rotate(-45deg) translate(8px, -7px);
+            }
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    padding: 4rem;
+    transition: all 0.2s ease-in-out;
+
+    &:after {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: -16rem;
+        left: -16rem;
+        width: 16rem;
+        height: 16rem;
+        background: $color-primary;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &.scrolled {
+        padding: 1.5rem;
+
+        &:after {
+            top: -8rem;
+            left: -8rem;
+            opacity: 1;
+        }
+    }
+}

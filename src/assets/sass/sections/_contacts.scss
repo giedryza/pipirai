@@ -1,0 +1,61 @@
+.contacts {
+    background: $color-primary;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    &__details {
+        padding: 6rem 1rem;
+        margin: auto;
+
+        @media only screen and (max-width: $bp-medium) {
+            padding: 3rem 1rem;
+        }
+    }
+
+    &__label {
+        font-size: $font-heading-sub;
+        font-weight: 300;
+        font-family: 'Itim', cursive;
+        color: $color-light;
+        margin-bottom: 5rem;
+    }
+
+    &__item {
+        font-size: $font-medium;
+        margin: 2rem 0;
+    }
+
+    &__icon {
+        fill: $color-light;
+        border: 1px solid $color-light;
+        padding: 1rem;
+        width: 4.5rem;
+        height: 4.5rem;
+        margin-right: 2rem;
+        transition: 0.1s all ease-in;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        &:link,
+        &:visited {
+            color: $color-light;
+            text-decoration: none;
+        }
+
+        &:hover > .contacts__icon,
+        &:active > .contacts__icon {
+            background: $color-light;
+            fill: $color-primary;
+        }
+    }
+}

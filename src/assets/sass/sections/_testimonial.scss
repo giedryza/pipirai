@@ -1,0 +1,70 @@
+.testimonial {
+    text-align: center;
+    width: 80rem;
+    max-width: 95%;
+    margin: 6rem auto;
+
+    &__quote {
+        font-style: italic;
+        margin-bottom: 3rem;
+
+        &:before {
+            content: open-quote;
+        }
+
+        &:after {
+            content: close-quote;
+        }
+    }
+
+    &__img {
+        display: inline-block;
+        margin: 2.5rem;
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        object-fit: cover;
+    }
+
+    &__author {
+        font-weight: 700;
+        text-transform: uppercase;
+
+        &--secondary {
+            font-weight: 300;
+        }
+    }
+
+    &__bubble {
+        width: 50rem;
+        max-width: 90%;
+        text-align: center;
+        font-size: $font-medium;
+        margin: auto;
+        padding: 3rem 6rem;
+        border: 1px solid $color-primary;
+        position: relative;
+
+        &:before,
+        &:after {
+            content: '';
+            width: 0px;
+            height: 0px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            border-style: solid;
+        }
+
+        &:before {
+            border-width: 10px;
+            border-color: $color-primary transparent transparent transparent;
+        }
+
+        &:after {
+            border-width: 9px;
+            border-color: $color-light transparent transparent transparent;
+        }
+    }
+}
