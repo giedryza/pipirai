@@ -16,7 +16,8 @@
         transition: all 0.2s;
     }
 
-    &:focus {
+    &:focus,
+    &:active {
         outline: none;
     }
 

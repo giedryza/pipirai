@@ -30,6 +30,11 @@
     &__logo {
         max-width: 20rem;
         margin-bottom: 5rem;
+
+        @media only screen and (max-height: 30em) {
+            max-width: 15rem;
+            margin-bottom: 0;
+        }
     }
 
     &__heading {
