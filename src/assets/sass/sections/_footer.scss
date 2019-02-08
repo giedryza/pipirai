@@ -20,7 +20,11 @@
         max-width: 12rem;
         position: relative;
         z-index: 2;
-        margin: 5rem;
+        margin: 4rem;
+
+        @media only screen and (max-width: $bp-medium) {
+            margin: 2rem;
+        }
     }
 
     &__legal {

@@ -48,6 +48,8 @@ class Layout extends PureComponent {
                     show={this.state.drawerOpen}
                     onClick={this.drawerToggle}
                 />
+
+                <main>{this.props.children}</main>
             </>
         );
     }

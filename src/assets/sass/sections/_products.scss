@@ -7,31 +7,27 @@
         margin: 2rem auto;
     }
 
-    &__list {
-    }
-
     &__item {
         padding: 2rem;
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-items: center;
-        grid-template-areas: 'left right';
 
-        @media only screen and (max-width: $bp-medium) {
-            grid-template-columns: 1fr;
-            grid-template-areas:
-                'left'
-                'right';
+        &:nth-child(odd) {
+            grid-template-areas: 'left right';
+
+            .products__about {
+                padding: 8rem 8rem 8rem 0;
+                text-align: right;
+
+                @media only screen and (max-width: $bp-large) {
+                    padding: 3rem 3rem 3rem 0;
+                }
+            }
         }
 
         &:nth-child(even) {
             grid-template-areas: 'right left';
-
-            @media only screen and (max-width: $bp-medium) {
-                grid-template-areas:
-                    'left'
-                    'right';
-            }
 
             .products__about {
                 padding: 8rem 0 8rem 8rem;
@@ -40,8 +36,18 @@
                 @media only screen and (max-width: $bp-large) {
                     padding: 3rem 0 3rem 3rem;
                 }
+            }
+        }
 
-                @media only screen and (max-width: $bp-medium) {
+        &:nth-child(odd),
+        &:nth-child(even) {
+            @media only screen and (max-width: $bp-medium) {
+                grid-template-columns: 1fr;
+                grid-template-areas:
+                    'left'
+                    'right';
+
+                .products__about {
                     padding: 3rem 0;
                     text-align: center;
                 }
@@ -50,44 +56,29 @@
     }
 
     &__about {
-        padding: 8rem 8rem 8rem 0;
-        text-align: right;
         grid-area: left;
+    }
 
-        @media only screen and (max-width: $bp-large) {
-            padding: 3rem 3rem 3rem 0;
-        }
-
-        @media only screen and (max-width: $bp-medium) {
-            padding: 3rem 0;
-            text-align: center;
-        }
+    &__img {
+        grid-area: right;
+        display: block;
+        max-width: 100%;
     }
 
     &__lead {
+        font-size: $font-small;
         color: $color-primary;
         text-transform: uppercase;
-        font-size: $font-small;
     }
 
     &__label {
         font-family: 'Itim', cursive;
         font-size: $font-heading-sub;
-
-        @media only screen and (max-width: $bp-medium) {
-            line-height: 1.1;
-        }
+        line-height: 1.1;
     }
 
     &__description {
         font-size: $font-medium;
         padding: 3rem 0;
-    }
-
-    &__img {
-        display: block;
-        max-width: 100%;
-        position: relative;
-        grid-area: right;
     }
 }
