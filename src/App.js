@@ -3,7 +3,7 @@ import './assets/sass/main.scss';
 
 import Navigation from './components/navigation';
 
-import Showcase from './components/header/Showcase';
+import Showcase from './components/showcase/Showcase';
 import Products from './components/products/Products';
 import Testimonial from './components/testimonial/Testimonial';
 import Contacts from './components/contacts/Contacts';
