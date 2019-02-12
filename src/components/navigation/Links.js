@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 
 const Links = ({ drawerClose }) => {
     const links = [
-        { label: 'Pagrindinis', linkto: 'header' },
+        { label: 'Pagrindinis', linkto: 'showcase' },
         { label: 'Produktai', linkto: 'products' },
         { label: 'Kontaktai', linkto: 'contacts' }
     ];
