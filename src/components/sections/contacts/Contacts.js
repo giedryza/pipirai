@@ -1,6 +1,6 @@
 import React from 'react';
-import Icon from '../utils/common/Icon';
-import Map from '../utils/common/Map';
+import Icon from '../../utils/common/Icon';
+import Map from '../../utils/common/Map';
 
 const Contacts = () => {
     const contacts = [

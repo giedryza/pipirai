@@ -1,0 +1,36 @@
+.modal {
+    width: 60rem;
+    max-height: 95vh;
+    max-width: 95%;
+    background: $color-light;
+    text-align: center;
+    position: fixed;
+    z-index: 13;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    display: flex;
+    flex-direction: column;
+
+    &__header {
+        font-size: $font-large;
+        font-weight: 700;
+        padding: 1.5rem;
+        color: $color-light;
+        background: $color-primary;
+    }
+
+    &__content {
+        font-size: $font-medium;
+        padding: 1.5rem;
+        color: $color-dark;
+        text-align: justify;
+        overflow-y: auto;
+    }
+
+    &__actions {
+        background: $color-primary;
+        padding: 1.5rem;
+    }
+}

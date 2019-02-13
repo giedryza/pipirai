@@ -2,7 +2,7 @@ import React, { PureComponent } from 'react';
 
 import Navbar from './Navbar';
 import Drawer from './Drawer';
-import Backdrop from './Backdrop';
+import Backdrop from '../backdrop/Backdrop';
 
 class Layout extends PureComponent {
     state = {
