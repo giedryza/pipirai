@@ -38,7 +38,6 @@
         width: 4.5rem;
         height: 4.5rem;
         margin-right: 2rem;
-        transition: 0.1s all ease-in;
     }
 
     &__link {
@@ -50,6 +49,11 @@
         &:visited {
             color: $color-light;
             text-decoration: none;
+        }
+
+        &:hover,
+        &:active {
+            text-decoration: underline;
         }
 
         &:hover > .contacts__icon,

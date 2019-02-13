@@ -15,7 +15,7 @@ const Contacts = () => {
             <li key={contact.icon} className="contacts__item">
                 <a href="/" className="contacts__link">
                     <Icon name={contact.icon} className="contacts__icon" />
-                    <p>{contact.info}</p>
+                    {contact.info}
                 </a>
             </li>
         ));
