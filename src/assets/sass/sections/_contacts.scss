@@ -52,7 +52,9 @@
         }
 
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
+            outline: none;
             text-decoration: underline;
         }
 

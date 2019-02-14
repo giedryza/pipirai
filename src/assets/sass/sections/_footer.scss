@@ -18,9 +18,9 @@
 
     &__logo {
         max-width: 12rem;
+        margin: 4rem;
         position: relative;
         z-index: 2;
-        margin: 4rem;
 
         @media only screen and (max-width: $bp-medium) {
             margin: 2rem;
@@ -28,9 +28,9 @@
     }
 
     &__legal {
-        z-index: 2;
-        position: relative;
         font-size: $font-medium;
         padding: 2rem;
+        position: relative;
+        z-index: 2;
     }
 }

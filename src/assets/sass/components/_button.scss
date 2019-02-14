@@ -6,8 +6,8 @@
     font-size: $font-medium;
     font-weight: 600;
     color: $color-light;
-    background: transparent;
     padding: 1.5rem 6rem;
+    background: transparent;
     border: 1px solid $color-light;
     transition: all 0.1s ease-in;
     cursor: pointer;
@@ -25,7 +25,9 @@
         border: 1px solid $color-primary;
 
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
+            outline: none;
             color: $color-light;
             background: $color-primary;
         }

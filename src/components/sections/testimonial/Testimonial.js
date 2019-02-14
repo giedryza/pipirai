@@ -12,7 +12,7 @@ const Testimonial = () => (
             <p className="testimonial__author">‎Laura Garšvaitė</p>
             <p className="testimonial__author--secondary">Pipirų ūkininkė</p>
         </div>
-        <img src={profile} alt="" className="testimonial__img" />
+        <img src={profile} alt="ceo" className="testimonial__img" />
     </section>
 );
 

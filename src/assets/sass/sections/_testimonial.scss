@@ -54,23 +54,20 @@
         &:before,
         &:after {
             content: '';
-            width: 0px;
-            height: 0px;
             position: absolute;
             top: 100%;
             left: 50%;
             transform: translateX(-50%);
-            border-style: solid;
         }
 
         &:before {
-            border-width: 10px;
-            border-color: $color-primary transparent transparent transparent;
+            border: 10px solid transparent;
+            border-top-color: $color-primary;
         }
 
         &:after {
-            border-width: 9px;
-            border-color: $color-light transparent transparent transparent;
+            border: 9px solid transparent;
+            border-top-color: $color-light;
         }
     }
 }

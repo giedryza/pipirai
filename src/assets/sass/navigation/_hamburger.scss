@@ -16,7 +16,8 @@
         transition: all 0.2s;
     }
 
-    &:hover &--line {
+    &:hover &--line,
+    &:focus &--line {
         background: $color-light-hover;
     }
 
