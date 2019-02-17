@@ -21,7 +21,7 @@ const Contacts = () => {
         ));
 
     return (
-        <section className="contacts">
+        <section className="contacts" id="contacts">
             <div className="contacts__details">
                 <h2 className="contacts__label">Susisiekime</h2>
                 <ul className="contacts__list">{renderContacts()}</ul>

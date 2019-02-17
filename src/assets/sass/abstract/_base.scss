@@ -12,6 +12,7 @@
 
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-size: 62.5%; // 10px
 
     @media only screen and (max-width: $bp-medium) {

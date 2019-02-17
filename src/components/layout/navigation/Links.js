@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-scroll';
 
 const Links = ({ drawerClose }) => {
     const links = [
@@ -11,19 +10,9 @@ const Links = ({ drawerClose }) => {
     const renderLinks = () =>
         links.map(link => (
             <li key={link.label}>
-                <Link
-                    to={link.linkto}
-                    className="links__link"
-                    activeClass="links__link--selected"
-                    onClick={drawerClose}
-                    smooth={true}
-                    spy={true}
-                    duration={500}
-                    delay={90}
-                    offset={-80}
-                >
+                <a href={`#${link.linkto}`} className="links__link" onClick={drawerClose}>
                     {link.label}
-                </Link>
+                </a>
             </li>
         ));
 

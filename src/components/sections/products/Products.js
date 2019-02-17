@@ -43,6 +43,15 @@ class Products extends Component {
     };
 
     modalToggle = selectedProduct => {
+        const body = document.querySelector('body');
+        const scrollbarWidth = window.innerWidth - body.clientWidth;
+
+        if (!this.state.modalOpen) {
+            body.setAttribute('style', `overflow: hidden; padding-right: ${scrollbarWidth}px;`);
+        } else {
+            body.removeAttribute('style');
+        }
+
         this.setState(prevState => {
             return {
                 modalOpen: !prevState.modalOpen,
@@ -62,7 +71,7 @@ class Products extends Component {
 
     render() {
         return (
-            <section className="products">
+            <section className="products" id="products">
                 <Modal
                     show={this.state.modalOpen}
                     modalToggle={() => this.modalToggle(null)}
