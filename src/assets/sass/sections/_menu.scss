@@ -1,0 +1,86 @@
+.menu {
+    width: 120rem;
+    max-width: 95%;
+    margin: 12rem auto;
+
+    &__buttons {
+        padding-bottom: 4rem;
+        text-align: center;
+    }
+
+    &__btn {
+        display: inline-block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: $font-small;
+        font-weight: 600;
+        color: $color-primary;
+        border: 1px solid $color-primary;
+        padding: 0.5rem 2rem;
+        margin: 0.5rem;
+        background: transparent;
+        transition: all 0.1s ease-in;
+        cursor: pointer;
+
+        &:hover,
+        &:active,
+        &:focus,
+        &--selected {
+            outline: none;
+            color: $color-light;
+            background: $color-primary;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
+        grid-gap: 5rem;
+        align-items: start;
+
+        @media only screen and (max-width: $bp-small) {
+            grid-template-columns: 1fr;
+            max-width: 35rem;
+            margin: auto;
+        }
+    }
+
+    &__card {
+        background: rgba($color-primary, 0.1);
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 15rem;
+        object-fit: contain;
+        object-position: center;
+        padding: 1rem;
+    }
+
+    &__title {
+        text-align: center;
+        padding: 1.5rem;
+        font-size: $font-medium;
+        font-weight: 600;
+    }
+
+    &__details {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem 1rem 2rem;
+        align-self: end;
+    }
+
+    &__quantity {
+        font-size: $font-small;
+        color: $color-primary;
+        font-weight: 400;
+    }
+
+    &__price {
+        font-size: $font-medium;
+        font-weight: 700;
+    }
+}

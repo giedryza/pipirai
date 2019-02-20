@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../../assets/img/logo.png';
 
 const Showcase = () => (
-    <div className="showcase" id="showcase">
+    <header className="showcase" id="home">
         <div className="showcase__content">
             <img src={logo} alt="logo" className="showcase__logo" />
             <h1 className="showcase__heading">Piprės ūkis</h1>
@@ -13,7 +13,7 @@ const Showcase = () => (
                 Produkcija
             </a>
         </div>
-    </div>
+    </header>
 );
 
 export default Showcase;
